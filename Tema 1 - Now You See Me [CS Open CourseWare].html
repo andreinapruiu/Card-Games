@@ -1,0 +1,801 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>
+    Tema 1 - Now You See Me    [CS Open CourseWare]
+  </title>
+
+  <meta name="generator" content="DokuWiki">
+<meta name="robots" content="noindex,nofollow">
+<meta name="date" content="2022-05-05T13:41:35+0300">
+<meta name="keywords" content="sd-ca,teme,tema1-2022">
+<link rel="search" type="application/opensearchdescription+xml" href="https://ocw.cs.pub.ro/courses/lib/exe/opensearch.php" title="CS Open CourseWare">
+<link rel="start" href="https://ocw.cs.pub.ro/courses/">
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="https://ocw.cs.pub.ro/courses/feed.php">
+<link rel="alternate" type="application/rss+xml" title="Current Namespace" href="https://ocw.cs.pub.ro/courses/feed.php?mode=list&amp;ns=sd-ca:teme">
+<link rel="alternate" type="text/html" title="Plain HTML" href="https://ocw.cs.pub.ro/courses/_export/xhtml/sd-ca/teme/tema1-2022">
+<link rel="canonical" href="http://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022">
+<link rel="stylesheet" type="text/css" href="./Tema 1 - Now You See Me [CS Open CourseWare]_files/css.php">
+<script type="text/javascript">/*<![CDATA[*/var NS='sd-ca:teme';var JSINFO = {"id":"sd-ca:teme:tema1-2022","namespace":"sd-ca:teme","isadmin":0,"isauth":0};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/js.php"></script>
+<script type="text/x-mathjax-config;executed=true">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/MathJax.js" id=""></script>
+<script type="text/javascript">/*<![CDATA[*/
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		  
+/*!]]>*/</script><script src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var pageTracker = _gat._getTracker("UA-38383934-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+		  
+/*!]]>*/</script>
+
+  <link rel="shortcut icon" href="https://ocw.cs.pub.ro/courses/lib/tpl/arctic/images/favicon.ico">
+
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="wrapper" class="show">
+  <div class="dokuwiki">
+
+    
+    <div class="stylehead">
+      <div class="header">
+        <div class="pagename">
+          <a href="https://ocw.cs.pub.ro/courses/sd-ca/"><img height="70" src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/sigla_sd.png"> </a>        </div>
+        <div class="logo">
+          <a style="color: #AAA !important;" href="https://ocw.cs.pub.ro/courses/">Open CourseWare</a>        </div>
+      </div>
+    
+       
+      <div class="breadcrumbs">
+              </div>
+      
+            </div>
+
+                  <div class="bar" id="bar__top">
+        <div class="bar-left">
+                  </div>
+        <div class="bar-right">
+          <a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022?do=recent" class="action recent" accesskey="r" rel="nofollow" title="Recent changes [R]">Recent changes</a><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022?do=login&amp;sectok=1bb8011bdb280980b126e8db1783eed8" class="action login" rel="nofollow" title="Login">Login</a>        </div>
+    </div>
+        
+    
+    
+    
+              <div class="left_page">
+          
+<h1 class="sectionedit1" id="tema_1_-_now_you_see_me">Tema 1 - Now You See Me</h1>
+<div class="level1">
+
+<p>
+<strong>Responsabili:</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="mailto:mirunaelena.banu@gmail.com" class="mail" title="mirunaelena.banu@gmail.com"> Miruna-Elena Banu</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="mailto:sin.costinrobert@gmail.com" class="mail" title="sin.costinrobert@gmail.com"> Costin Sin</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="mailto:dianamariasimion@gmail.com" class="mail" title="dianamariasimion@gmail.com"> Diana Simion</a></div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> Data publicării: <strong>21.03.2022</strong></div>
+</li>
+<li class="level1"><div class="li"> Deadline <strong>HARD</strong>: <strong>10.04.2022 23:55:00</strong></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit2" id="actualizari">Actualizări</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Adăugare clarificări structură de date generică: <strong>25.03.2022</strong> </div>
+</li>
+<li class="level1"><div class="li"> Adăugare schelet README: <strong>24.03.2022</strong></div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit3" id="obiective">Obiective</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Aprofundarea cunoștințelor în utilizarea limbajului C.</div>
+</li>
+<li class="level1"><div class="li"> Implementarea și utilizarea structurii de date <strong><a href="https://en.wikipedia.org/wiki/Doubly_linked_list" class="urlextern" title="https://en.wikipedia.org/wiki/Doubly_linked_list" rel="nofollow"> lista dublu inlantuita</a> </strong>.</div>
+</li>
+<li class="level1"><div class="li"> Familiarizarea cu implementarea unei <strong>structuri de date generice</strong>.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit4" id="introducere">Introducere</h2>
+<div class="level2">
+
+<p>
+<em> “The closer you think you are, the less you'll actually see.” </em>
+</p>
+
+<p>
+<em> Faimosul grup de iluzionisti pune la cale un nou show pentru care au nevoie de cei mai experimentați voluntari. Plictisiți de monotonia de la facultate și dornici să experimentați ceva nou, ați luat decizia să mergeți și voi la preselecții. </em>
+</p>
+
+<p>
+<em> Pentru a putea lua parte la acest spectacol, veți fi supuși unor teste ce implică trucuri cu cărți. Scopul vostru este să demonstrați că sunteți capabili să impresionați membrii grupului și să vă câștigați locul în show. </em>
+</p>
+
+</div>
+
+<h2 class="sectionedit5" id="cerinta">Cerință</h2>
+<div class="level2">
+
+<p>
+Veți primi de la unul din membrii grupului mai multe pachete de cărți pe care le veți ține într-o <strong>listă dublu înlănțuită</strong>. În cadrul fiecărui pachet, cărțile sunt ținute sub forma unei <strong>liste dublu înlănțuite</strong>. 
+</p>
+
+<p>
+Fiecare carte are două proprietăți: valoare (în intervalul <strong>[1, 14]</strong>) și simbol (<strong>HEART, CLUB, DIAMOND, SPADE</strong>).
+</p>
+
+<p>
+Pentru a vă testa abilitățile, membrii grupului vă vor da, pe rând, diverse comenzi pe care va trebui să le executați asupra pachetelor. Aveți grijă însă, trebuie să realizați perfect trucurile pentru a îi convinge pe magicieni că vă meritați locul!
+</p>
+
+</div>
+
+<h3 class="sectionedit6" id="comenzi_posibile_30p">Comenzi posibile (30p)</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>ADD_DECK &lt;număr_cărți&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> adaugă un nou pachet de &lt;număr_cărți&gt; cărți la finalul listei de pachete.</div>
+</li>
+<li class="level2"><div class="li"> comanda este urmată de cel puțin &lt;număr_cărți&gt; perechi {valoare, simbol}, dintre care se vor adăuga în pachet primele &lt;număr_cărți&gt; perechi valide.</div>
+</li>
+<li class="level2"><div class="li"> în momentul în care pachetul construit ajunge la capacitatea &lt;număr_cărți&gt;, pachetul va fi inserat în lista de pachete.</div>
+</li>
+<li class="level2"><div class="li"> dacă cartea introdusă este una invalidă, se va afișa eroarea INVALID_CARD (vezi secțiunea dedicată erorilor).</div>
+</li>
+<li class="level2"><div class="li"> după adăugarea pachetului în lista de pachete se va afișa mesajul: <strong>“The deck was successfully created with &lt;număr_cărți&gt; cards.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>DEL_DECK &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> șterge pachetul &lt;index_pachet&gt; din lista de pachete.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet&gt; was successfully deleted.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>DEL_CARD &lt;index_pachet&gt; &lt;index_carte&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> șterge cartea &lt;index_carte&gt; din pachetul &lt;index_pachet&gt;</div>
+</li>
+<li class="level2"><div class="li"> dacă în urma comenzii pachetul rămâne fără cărți, acesta este șters din lista de pachete.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The card was successfully deleted from deck &lt;index_pachet&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>ADD_CARDS &lt;index_pachet&gt; &lt;număr_cărți&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> adaugă în pachetul &lt;index_pachet&gt; &lt;număr_cărți&gt; cărți.</div>
+</li>
+<li class="level2"><div class="li"> comanda este urmată de cel puțin &lt;număr_cărți&gt; perechi {valoare, simbol}, dintre care se vor adăuga la finalul pachetului &lt;număr_cărți&gt; perechi valide.</div>
+</li>
+<li class="level2"><div class="li"> după adăugarea celor &lt;număr_cărți&gt; cărți se afișează mesajul: <strong>“The cards were successfully added to deck &lt;index_pachet&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>DECK_NUMBER</strong></div>
+<ul>
+<li class="level2"><div class="li"> afișează câte pachete de cărți se află în listă</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The number of decks is &lt;număr_pachete&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>DECK_LEN &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> afișează lungimea pachetului &lt;index_pachet&gt;</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The length of deck &lt;index_pachet&gt; is &lt;număr_cărți&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>SHUFFLE_DECK &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> inversează prima și a doua jumătate a pachetului &lt;index_pachet&gt;.</div>
+</li>
+<li class="level2"><div class="li"> prima jumătate conține primele n/2 cărți, iar a doua jumătate contine n/2 cărți (n par) sau n/2 + 1 carti (n impar), unde n este numărul de cărți din pachet.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet&gt; was successfully shuffled.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+Exemplu:
+<p></p>
+<pre class="code">Pachet 0: 1, 2, 3, 4, 5
+Rezultat: 3, 4, 5, 1, 2</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>MERGE_DECKS &lt;index_pachet_1&gt; &lt;index_pachet_2&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> combină pachetele &lt;index_pachet_1&gt; și &lt;index_pachet_2&gt; luând câte o carte din fiecare pachet, rând pe rând.</div>
+</li>
+<li class="level2"><div class="li"> ele două pachete combinate vor fi șterse, iar pachetul rezultat va fi adăugat la finalul listei de pachete.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet_1&gt; and the deck &lt;index_pachet_2&gt; were successfully merged.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+Exemplu:
+<p></p>
+<pre class="code">Pachet 0: 1, 2, 3, 4
+Pachet 1: 4, 5, 6, 7, 11, 12, 13
+Rezultat: 1, 4, 2, 5, 3, 6, 4, 7, 11, 12, 13</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>SPLIT_DECK &lt;index_pachet&gt; &lt;index_split&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> împarte pachetul &lt;index_pachet&gt; după indexul &lt;index_split&gt;.</div>
+</li>
+<li class="level2"><div class="li"> primul pachet rezultat va rămâne la &lt;index_pachet&gt;, iar al doilea pachet rezultat se va insera la pozitia &lt;index_pachet&gt; + 1.</div>
+</li>
+<li class="level2"><div class="li"> dacă în urma comenzii rezultă un pachet gol și un pachet ce contine toate cărțile (index_split = 0), se va păstra doar pachetul ce contine cărți.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet&gt; was successfully split by index &lt;index_split&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+<p></p>
+<pre class="code">Pachet 0: 1, 2, 3, 4
+Pachet 1: 7, 8, 9
+Pachet 2: 12, 13, 14
+SPLIT_DECK 0 2
+Rezultate: 
+	Pachet 1a: 1, 2
+	Pachet 1b: 3, 4
+	Pachet 2: 7, 8, 9
+	Pachet 3: 12, 13, 14</pre>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>REVERSE_DECK &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> inversează ordinea cărților din pachetul &lt;index_pachet&gt;.</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet&gt; was successfully reversed.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>SHOW_DECK &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> afișează cărțile din pachetul &lt;index_pachet&gt;.</div>
+</li>
+<li class="level2"><div class="li"> structura: &lt;index_pachet&gt; - {valoare1, simbol1}, {valoare2, simbol2},  etc..</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat pe ecran va fi de forma:</div>
+<ul>
+<li class="level3"><div class="li"> <pre class="code bash">Deck <span class="sy0">&lt;</span>index_pachet<span class="sy0">&gt;</span>:\n
+\t<span class="sy0">&lt;</span>valoare_carte1<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte1<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte2<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte2<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte3<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte3<span class="sy0">&gt;</span>\n
+…</pre>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>SHOW_ALL</strong></div>
+<ul>
+<li class="level2"><div class="li"> afișează toate cărțile din toate pachetele.</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat pe ecran va fi de forma:</div>
+<ul>
+<li class="level3"><div class="li"> <pre class="code bash">Deck <span class="sy0">&lt;</span>index_pachet1<span class="sy0">&gt;</span>:\n
+\t<span class="sy0">&lt;</span>valoare_carte1<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte1<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte2<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte2<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte3<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte3<span class="sy0">&gt;</span>\n
+…
+Deck <span class="sy0">&lt;</span>index_pachet2<span class="sy0">&gt;</span>:\n
+\t<span class="sy0">&lt;</span>valoare_carte1<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte1<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte2<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte2<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte3<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte3<span class="sy0">&gt;</span>\n
+…
+Deck <span class="sy0">&lt;</span>index_pachet3<span class="sy0">&gt;</span>:\n
+\t<span class="sy0">&lt;</span>valoare_carte1<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte1<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte2<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte2<span class="sy0">&gt;</span>\n
+\t<span class="sy0">&lt;</span>valoare_carte3<span class="sy0">&gt;</span> <span class="sy0">&lt;</span>simbol_carte3<span class="sy0">&gt;</span>\n
+…</pre>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>EXIT</strong></div>
+<ul>
+<li class="level2"><div class="li"> comanda exit va opri execuția programului.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit7" id="tratarea_erorilor_50p">Tratarea erorilor (50p)</h3>
+<div class="level3">
+
+<p>
+La primirea comenzilor de la tastatură pot apărea unele erori:
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>DECK_INDEX_OUT_OF_BOUNDS</strong></div>
+<ul>
+<li class="level2"><div class="li"> această eroare apare atunci când indexul pachetului din comandă nu există.</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat: <strong>“The provided index is out of bounds for the deck list.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>CARD_INDEX_OUT_OF_BOUNDS</strong></div>
+<ul>
+<li class="level2"><div class="li"> această eroare apare atunci când indexul cărții din comandă nu există.</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat: <strong>“The provided index is out of bounds for deck &lt;index_pachet&gt;.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>INVALID_CARD</strong></div>
+<ul>
+<li class="level2"><div class="li"> această eroare apare dacă se încearcă introducerea unei cărți care nu are valoarea în intervalul [1, 14] sau simbolul in lista [“HEART”, “SPADE”, “CLUB”, “DIAMOND”].</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat: <strong>“The provided card is not a valid one.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> <strong>INVALID_COMMAND</strong></div>
+<ul>
+<li class="level2"><div class="li"> această eroare apare atunci când este introdusă o comandă inexistentă sau atunci când numărul de parametri este incorect.</div>
+</li>
+<li class="level2"><div class="li"> mesajul afișat: <strong>“Invalid command. Please try again.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteimportant">Erorile de index aduc după sine suspendarea execuției restului comenzii!
+</div><p></p>
+<p></p>
+
+</div>
+
+<h3 class="sectionedit8" id="bonus_10p">Bonus (10p)</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <strong>SORT_DECK &lt;index_pachet&gt;</strong></div>
+<ul>
+<li class="level2"><div class="li"> sortează pachetul &lt;index_pachet&gt; după valoarea cărților de joc.</div>
+</li>
+<li class="level2"><div class="li"> dacă au aceeași valoare, prioritatea simbolurilor va fi: {<strong>HEART, SPADE, DIAMOND, CLUB</strong>} (inima rosie va avea cea mai mare prioritate, iar trefla cea mai mica).</div>
+</li>
+<li class="level2"><div class="li"> după finalizarea comenzii se va afișa mesajul: <strong>“The deck &lt;index_pachet&gt; was successfully sorted.\n”</strong>.</div>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit9" id="readme_20p">README (20p)</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Fișierul de README va avea numele <strong>README</strong> sau <strong>README.md</strong> și va fi pus <strong>în rădăcina arhivei</strong>. În acest fișier veți detalia implementarea voastră, ce vi s-a părut interesant și care a fost cea mai dificilă parte a temei.</div>
+</li>
+<li class="level1"><div class="li"> Găsiți <a href="https://ocw.cs.pub.ro/courses/_media/sd-ca/teme/readme-skel.md" class="media mediafile mf_md" title="sd-ca:teme:readme-skel.md (586 B)"> aici</a> un model de README pe care vă rugăm să îl respectați pe cât posibil.</div>
+</li>
+</ul>
+
+</div>
+
+<h3 class="sectionedit10" id="coding_style_10p">Coding Style (10p)</h3>
+<div class="level3">
+
+</div>
+
+<h2 class="sectionedit11" id="mentiuni">Mențiuni</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> Indexarea se face <strong>de la 0</strong> pentru orice tip de listă.</div>
+</li>
+<li class="level1"><div class="li"> Alocarea memoriei se va realiza <strong>dinamic</strong>. Alocarea statică a bufferelor a căror dimensiune nu se cunoaște la compile-time, atrage dupa ea depunctări.</div>
+</li>
+<li class="level1"><div class="li"> Se cere ca structura de date folosită să fie <strong>generică</strong>. Pentru implementare lipsită de genericitate, se vor pierde <strong>20p din totalul temei</strong>.</div>
+</li>
+</ul>
+
+<p>
+</p><p></p><div class="noteclassic">
+<p></p>
+<ul>
+<li class="level1"><div class="li"> O structură de date <strong>generică</strong> are rolul de a nu duplica (pe cât posibil) cod permițând adăugarea în cadrul ei a <strong>oricărui tip de date</strong>. (<strong>hint:</strong> void*)</div>
+</li>
+<li class="level1"><div class="li"> Exemplu: Vedeți în cadrul scheletului de lab unde a trebuit să implementați exact această situație. (<strong>hint:</strong> data_size)</div>
+</li>
+</ul>
+
+<p>
+
+</p></div><p></p>
+<p></p>
+<ul>
+<li class="level1"><div class="li"> <strong>Nu</strong> este indicată utilizarea <strong>variabilelor globale</strong>. Utilizarea acestora aduce pierderea a <strong>20p din totalul temei</strong>.</div>
+</li>
+<li class="level1"><div class="li"> Eliberarea memoriei se va verifica folosind utilitarul Valgrind. O temă ce conține memory leaks va atrage după sine punctaj de <strong>0p pe testul respectiv</strong>.</div>
+</li>
+</ul>
+
+</div>
+
+<h2 class="sectionedit12" id="checker">Checker</h2>
+<div class="level2">
+
+<p>
+Teste: <a href="https://ocw.cs.pub.ro/courses/_media/sd-ca/teme/2022-tema1-check.zip" class="media mediafile mf_zip" title="sd-ca:teme:2022-tema1-check.zip (4.3 MB)"> 2022-tema1-check.zip</a>.
+</p>
+
+<p>
+Temele vor fi trimise pe <a href="https://vmchecker.cs.pub.ro/ui/#SD" class="urlextern" title="https://vmchecker.cs.pub.ro/ui/#SD" rel="nofollow">vmchecker</a>. 
+<strong>Atenție!</strong> Temele trebuie trimise în secțiunea <strong>Structuri de Date (CA)</strong>.
+</p>
+
+<p>
+Arhiva trebuie să conțină:
+</p>
+<ul>
+<li class="level1"><div class="li"> sursele <strong>.c și .h</strong></div>
+</li>
+<li class="level1"><div class="li"> fișier <strong>Makefile</strong> cu două reguli:</div>
+<ul>
+<li class="level2"><div class="li"> regula <strong>build</strong>: în urma căreia se generează un executabil numit <strong>tema1</strong></div>
+</li>
+<li class="level2"><div class="li"> regula <strong>clean</strong> care şterge executabilul si fișierele obiect</div>
+</li>
+</ul>
+</li>
+<li class="level1"><div class="li"> Compilarea trebuie sa se realizeze cu flagurile <strong>-Wall -Wextra -std=c99</strong></div>
+</li>
+<li class="level1"><div class="li"> fișier <strong>README</strong> care să conțină detalii despre implementarea temei</div>
+</li>
+</ul>
+
+</div>
+
+        </div>
+        <div class="right_sidebar">
+          <form action="https://ocw.cs.pub.ro/courses/start" accept-charset="utf-8" class="search" id="dw__search" method="get"><div class="no"><input type="hidden" name="do" value="search"><input type="text" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]"><input type="submit" value="Search" class="button" title="Search"><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>          <div class="namespace_sidebar sidebar_box">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/catalog" class="wikilink1" title="sd-ca:catalog">Catalog</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://docs.google.com/spreadsheets/d/1Sf8oMQxoGAxFf1-mfFOyrUJNEAeClMGpE3Zyis1qNEw/edit?usp=sharing" class="urlextern" title="https://docs.google.com/spreadsheets/d/1Sf8oMQxoGAxFf1-mfFOyrUJNEAeClMGpE3Zyis1qNEw/edit?usp=sharing" rel="nofollow">Informatii utile</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/reguli-examen" class="wikilink1" title="sd-ca:reguli-examen">Reguli Examen</a></div>
+</li>
+</ul>
+
+<h1 class="sectionedit1" id="laboratoare">Laboratoare</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-01" class="wikilink1" title="sd-ca:laboratoare:lab-01">Lab 1 - Recapitulare PC. Vectori si matrice. Alocare dinamica</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-02" class="wikilink1" title="sd-ca:laboratoare:lab-02">Lab 2 - Liste înlănțuite</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-03" class="wikilink1" title="sd-ca:laboratoare:lab-03">Lab 3 - Liste înlănțuite (continuare)</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-04" class="wikilink1" title="sd-ca:laboratoare:lab-04">Lab 4 - Dicţionar</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-05" class="wikilink1" title="sd-ca:laboratoare:lab-05">Lab 5 - Stivă şi Coadă</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-06" class="wikilink1" title="sd-ca:laboratoare:lab-06">Lab 6 - Grafuri - Basics</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-07" class="wikilink1" title="sd-ca:laboratoare:lab-07">Lab 7 - Grafuri - Advanced</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-08" class="wikilink1" title="sd-ca:laboratoare:lab-08">Lab 8 - Arbori Binari</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-09" class="wikilink1" title="sd-ca:laboratoare:lab-09">Lab 9 - ABC şi Heap</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-10" class="wikilink1" title="sd-ca:laboratoare:lab-10">Lab 10 - Treap</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/lab-11" class="wikilink1" title="sd-ca:laboratoare:lab-11">Lab 11 - Arbori generici. Trie</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT1 SECTION "Laboratoare" [186-893] -->
+<h1 class="sectionedit2" id="laboratoare_din_anii_trecuti">Laboratoare din anii trecuti</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2013/index" class="wikilink1" title="sd-ca:2013:index"> Laboratoare 2013</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2014" class="wikilink1" title="sd-ca:2014"> Laboratoare 2014</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2015" class="wikilink1" title="sd-ca:2015"> Laboratoare 2015</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2016" class="wikilink1" title="sd-ca:2016"> Laboratoare 2016</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2017" class="wikilink1" title="sd-ca:2017"> Laboratoare 2017</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2018" class="wikilink1" title="sd-ca:2018"> Laboratoare 2018</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2019" class="wikilink1" title="sd-ca:2019"> Laboratoare 2019</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2020" class="wikilink1" title="sd-ca:2020"> Laboratoare 2020</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/2021" class="wikilink1" title="sd-ca:2021"> Laboratoare 2021</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "Laboratoare din anii trecuti" [894-1606] -->
+<h1 class="sectionedit3" id="teste_practice">Teste practice</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/instructiuni-test-practic" class="wikilink1" title="sd-ca:instructiuni-test-practic">Instructiuni test practic</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/depunctari-simulare" class="wikilink1" title="sd-ca:depunctari-simulare">Depunctari simulare test practic</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/contact-tutori" class="wikilink1" title="sd-ca:contact-tutori">Contact tutori</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "Teste practice" [1607-1813] -->
+<h1 class="sectionedit4" id="teme">Teme</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/regulament-checker" class="wikilink1" title="sd-ca:regulament-checker"> Regulament coding style</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/skel-readme" class="wikilink1" title="sd-ca:skel-readme"> Schelet README </a></div>
+</li>
+<li class="level1"><div class="li"> <span class="curid"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022" class="wikilink1" title="sd-ca:teme:tema1-2022">Tema 1</a></span></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema2-2022" class="wikilink1" title="sd-ca:teme:tema2-2022">Tema 2</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema3-2022" class="wikilink1" title="sd-ca:teme:tema3-2022">Tema 3</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "Teme" [1814-2047] -->
+<h1 class="sectionedit5" id="resurse">Resurse</h1>
+<div class="level1">
+<ul>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/colaborative" class="wikilink1" title="sd-ca:colaborative">Instrumente Colaborative</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/laboratoare/tutorial-github-classroom" class="wikilink1" title="sd-ca:laboratoare:tutorial-github-classroom">Tutorial GitHub Classroom</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="https://ocw.cs.pub.ro/courses/sd-ca/mobil" class="wikilink1" title="sd-ca:mobil">Aplicatie pentru telefonul mobil</a></div>
+</li>
+</ul>
+
+<div><div id="nojs_indexmenu_206110185562794bf4bca6a" data-jsajax="" class="indexmenu_nojs">
+
+<ul class="idx">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/resurse/debugging" class="wikilink1" title="sd-ca:resurse:debugging">Debugging</a></div></li>
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/resurse/visualization" class="wikilink1" title="sd-ca:resurse:visualization">Data Structure Visualization</a></div></li>
+</ul>
+</div></div>
+
+</div>
+<!-- EDIT5 SECTION "Resurse" [2048-] -->
+</div>
+<div class="toc_sidebar sidebar_box">
+<!-- TOC START -->
+<div id="sb__right__dw__toc">
+<h3 class="toggle">Table of Contents</h3>
+<div>
+
+<ul class="toc">
+<li class="level1"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#tema_1_-_now_you_see_me">Tema 1 - Now You See Me</a></div>
+<ul class="toc">
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#actualizari">Actualizări</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#obiective">Obiective</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#introducere">Introducere</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#cerinta">Cerință</a></div>
+<ul class="toc">
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#comenzi_posibile_30p">Comenzi posibile (30p)</a></div></li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#tratarea_erorilor_50p">Tratarea erorilor (50p)</a></div></li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#bonus_10p">Bonus (10p)</a></div></li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#readme_20p">README (20p)</a></div></li>
+<li class="level3"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#coding_style_10p">Coding Style (10p)</a></div></li>
+</ul>
+</li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#mentiuni">Mențiuni</a></div></li>
+<li class="level2"><div class="li"><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#checker">Checker</a></div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<!-- TOC END -->
+</div>
+        </div>
+      
+    
+      <div class="stylefoot">
+        <div class="meta">
+          <div class="user">
+                    </div>
+          <div class="doc">
+          sd-ca/teme/tema1-2022.txt · Last modified: 2022/05/05 13:41 by emil.racec          </div>
+        </div>
+      </div>
+
+    <div class="clearer"></div>
+
+    
+                <div class="bar" id="bar__bottom">
+      <div class="bar-left">
+        <a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022?do=revisions" class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a>      </div>
+      <div class="bar-right">
+        <a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022?do=media&amp;ns=sd-ca%3Ateme" class="action media" rel="nofollow" title="Media Manager">Media Manager</a><a href="https://ocw.cs.pub.ro/courses/sd-ca/teme/tema1-2022#dokuwiki__top" class="action top" accesskey="t" rel="nofollow" title="Back to top [T]">Back to top</a>      </div>
+    </div>
+    <div class="clearer"></div>
+            
+    <div align="center" class="footerinc">
+  <div class="license"><a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/cc-by-sa.png" alt="CC Attribution-Share Alike 3.0 Unported"></a></div>
+  <a target="_blank" href="http://www.chimeric.de/" title="www.chimeric.de"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-chimeric-de.png" width="80" height="15" alt="www.chimeric.de" border="0"></a>
+
+  <a target="_blank" href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-css.png" width="80" height="15" alt="Valid CSS" border="0"></a>
+
+  <a target="_blank" href="http://wiki.splitbrain.org/wiki:dokuwiki" title="Driven by DokuWiki"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-dw.png" width="80" height="15" alt="Driven by DokuWiki" border="0"></a>
+
+  <a target="_blank" href="http://www.firefox-browser.de/" title="do yourself a favour and use a real browser - get firefox"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-firefox.png" width="80" height="15" alt="do yourself a favour and use a real browser - get firefox!!" border="0"></a>
+  
+  <a target="_blank" href="https://ocw.cs.pub.ro/courses/feed.php" title="Recent changes RSS feed"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-rss.png" width="80" height="15" alt="Recent changes RSS feed" border="0"></a>
+
+  <a target="_blank" href="http://validator.w3.org/check/referer" title="Valid XHTML 1.0"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/button-xhtml.png" width="80" height="15" alt="Valid XHTML 1.0" border="0"></a>
+</div>
+
+  </div>
+</div>
+
+<div class="no"><img src="./Tema 1 - Now You See Me [CS Open CourseWare]_files/indexer.php" width="2" height="1" alt=""></div>
+
+
+</body></html>
