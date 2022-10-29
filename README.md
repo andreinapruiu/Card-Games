@@ -1,6 +1,6 @@
 &copy; 2022 Andrei Napruiu (napruiuandrei@gmail.com)
 
-# Now you see me - Homework 1
+# Now you see me
 
 # Contents:
 1. [Short Description](#description)
@@ -16,8 +16,6 @@
 
 * I think the code is easy to read and also understand, most of the commands being already named very specific. Only the 'commands function' in the main file is a little hard to digest. Basically, the function uses a line(which contains the command given by the user) to split it into the real command(SHOW_ALL etc.) and parameters(deck_index, card_index etc.). All of this is done for later use as it can be seen in the main function where the commands given by the user are compared (in a switch) with the possible instructions for the decks.
 <br>Also, in the main.c file, where are all the includes it is specified that every file has multiple function in it(very specific like show_deck.h has all the functions that print something)
-
-* Other details about the homework can be seen in the [html](https://github.com/andreinapruiu/SD-Homeworks/blob/3dc34dfa008a2bddf6c5883d6ff04dd3bbad19d0/Tema%201%20-%20Now%20You%20See%20Me%20%5BCS%20Open%20CourseWare%5D.html) file attached in the repo.
 
 # Commands
 Below is the list of every command (in some cases explained), its input and its output.
